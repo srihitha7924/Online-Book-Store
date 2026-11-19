@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Online Book Store</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .form-container { max-width: 500px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>📚 Online Book Store</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html" class="active">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="form-container">
+        <h2>Registration Form</h2>
+        <form name="register" onsubmit="return validateRegisterForm(event)">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="uname">Username:</label>
+            <input type="text" id="uname" name="uname" placeholder="Choose a username" required>
+
+            <label for="pwd">Password:</label>
+            <input type="password" id="pwd" name="pwd" placeholder="Create a password" required>
+
+            <label for="confirm-pwd">Confirm Password:</label>
+            <input type="password" id="confirm-pwd" name="confirm-pwd" placeholder="Confirm your password" required>
+
+            <label>Gender:</label>
+            <div class="radio-group">
+                <label><input type="radio" name="gender" value="Male"> Male</label>
+                <label><input type="radio" name="gender" value="Female"> Female</label>
+                <label><input type="radio" name="gender" value="Other"> Other</label>
+            </div>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" min="10" max="120" placeholder="Enter your age" required>
+
+            <label for="addr">Address:</label>
+            <textarea id="addr" name="addr" rows="3" placeholder="Enter your address" required style="width:100%; padding:12px; margin:5px 0 15px; border:1px solid #555; border-radius:8px; background-color:rgba(255,255,255,0.1); color:#fff; font-size:14px; resize:vertical;"></textarea>
+
+            <label for="languages">Preferred Language:</label>
+            <select id="languages" name="languages" required>
+                <option value="" disabled selected>Select a language</option>
+                <option value="English">English</option>
+                <option value="Hindi">Hindi</option>
+                <option value="Telugu">Telugu</option>
+                <option value="Tamil">Tamil</option>
+                <option value="Kannada">Kannada</option>
+                <option value="Malayalam">Malayalam</option>
+                <option value="Bengali">Bengali</option>
+                <option value="Marathi">Marathi</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <div class="error" id="error-msg"></div>
+
+            <input type="submit" value="Register">
+            <input type="reset" value="Reset">
+
+            <h4 style="color:#ccc; text-align:center; margin-top:15px;">
+                Already have an account? <a href="login.html">Login here</a>
+            </h4>
+        </form>
+    </div>
+
+    <footer>
+        <p>CopyRights © D.V Sai Srihitha 22761A0576 | Online Book Store</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

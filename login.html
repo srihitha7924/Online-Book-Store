@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Online Book Store</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>📚 Online Book Store</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="login.html" class="active">Login</a></li>
+                <li><a href="register.html">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="form-container">
+        <h1>Login Form</h1>
+        <form name="login" onsubmit="return validateLoginForm(event)">
+            <label for="uname">Enter Username:</label>
+            <input type="text" id="uname" name="uname" placeholder="Enter your username" required>
+
+            <label for="pwd">Enter Password:</label>
+            <input type="password" id="pwd" name="pwd" placeholder="Enter your password" required>
+
+            <div class="error" id="error-msg"></div>
+
+            <input type="submit" value="Login">
+            <input type="reset" value="Reset">
+
+            <h4 style="color:#ccc; text-align:center; margin-top:15px;">
+                If you are a new user <a href="register.html">Sign up</a>
+            </h4>
+        </form>
+    </div>
+
+    <footer>
+        <p>CopyRights © D.V Sai Srihitha 22761A0576 | Online Book Store</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

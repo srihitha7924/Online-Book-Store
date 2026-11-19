@@ -1,0 +1,585 @@
+/* ========================================
+   Online Book Store - Global Styles
+   ======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 25%, #0f3460 50%, #1a1a2e 75%, #16213e 100%);
+    background-size: 400% 400%;
+    background-attachment: fixed;
+    min-height: 100vh;
+    color: #333;
+    animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ---- Header ---- */
+header {
+    background-color: rgba(0, 0, 0, 0.85);
+    color: #fff;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+header h1 {
+    text-align: center;
+    font-family: 'Georgia', 'Apple Chancery', cursive;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 8px 18px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+nav ul li a.active {
+    background-color: #4CAF50;
+}
+
+/* ---- Hero Section ---- */
+.hero {
+    text-align: center;
+    padding: 120px 20px 80px;
+    background: linear-gradient(135deg, rgba(0,0,0,0.7), rgba(0,0,0,0.4));
+    margin-bottom: 30px;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #eee;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 14px 36px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s, box-shadow 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4);
+}
+
+.btn-dark {
+    background-color: #333;
+}
+
+.btn-dark:hover {
+    background-color: #555;
+}
+
+/* ---- Footer ---- */
+footer {
+    background-color: rgba(0, 0, 0, 0.85);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    backdrop-filter: blur(10px);
+}
+
+/* ---- Container ---- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ---- Form Styles ---- */
+.form-container {
+    max-width: 420px;
+    margin: 60px auto;
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.form-container h1,
+.form-container h2 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 25px;
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ddd;
+    font-size: 14px;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="password"],
+.form-container input[type="number"],
+.form-container select,
+.form-container textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 5px 0 15px;
+    border: 1px solid #555;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+.form-container select option {
+    background-color: #1a1a2e;
+    color: #fff;
+}
+
+.form-container input:focus,
+.form-container select:focus,
+.form-container textarea:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+.form-container input::placeholder {
+    color: #999;
+}
+
+.form-container input[type="submit"],
+.form-container button[type="submit"] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.form-container input[type="submit"]:hover,
+.form-container button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.form-container input[type="reset"] {
+    width: 100%;
+    background-color: #666;
+    color: white;
+    padding: 14px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.form-container input[type="reset"]:hover {
+    background-color: #888;
+}
+
+.form-container .error {
+    color: #ff6b6b;
+    font-size: 12px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+.form-container a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.form-container a:hover {
+    text-decoration: underline;
+}
+
+.form-container .radio-group {
+    display: flex;
+    gap: 20px;
+    margin: 5px 0 15px;
+}
+
+.form-container .radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #ddd;
+    cursor: pointer;
+}
+
+.form-container .radio-group input[type="radio"] {
+    width: auto;
+    margin: 0;
+}
+
+/* ---- Shop / Book Cards ---- */
+.shop-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 30px 20px;
+    gap: 25px;
+}
+
+.book-card {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    width: 280px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.book-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+.book-card img {
+    width: 180px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.book-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: #222;
+}
+
+.book-card .author {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.book-card .price {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #4CAF50;
+    margin-bottom: 15px;
+}
+
+.book-card .btn {
+    padding: 10px 25px;
+    font-size: 14px;
+}
+
+/* ---- Profile Table ---- */
+.profile-container {
+    max-width: 600px;
+    margin: 60px auto;
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 40px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.profile-container h1 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.profile-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+.profile-table th,
+.profile-table td {
+    padding: 14px 20px;
+    text-align: left;
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #fff;
+}
+
+.profile-table th {
+    background-color: rgba(76, 175, 80, 0.3);
+    width: 40%;
+    font-weight: 600;
+}
+
+.profile-table td {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* ---- About Us ---- */
+.about-container {
+    max-width: 800px;
+    margin: 60px auto;
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 50px 40px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    color: #eee;
+}
+
+.about-container h1 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 2rem;
+}
+
+.about-container p {
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.about-container .features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.about-container .feature-card {
+    background-color: rgba(255,255,255,0.1);
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.about-container .feature-card h3 {
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+/* ---- Cart ---- */
+.cart-container {
+    max-width: 800px;
+    margin: 60px auto;
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 40px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.cart-container h1 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: rgba(255,255,255,0.1);
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.cart-item img {
+    width: 60px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.cart-item .cart-info {
+    flex: 1;
+    color: #fff;
+}
+
+.cart-item .cart-info h3 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.cart-item .cart-info .price {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.cart-item .remove-btn {
+    background: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.cart-item .remove-btn:hover {
+    background: #c0392b;
+}
+
+.cart-total {
+    text-align: right;
+    color: #fff;
+    font-size: 1.3rem;
+    padding: 20px 0;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    margin-top: 20px;
+}
+
+.cart-total span {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.empty-cart {
+    text-align: center;
+    color: #aaa;
+    padding: 60px 20px;
+    font-size: 1.2rem;
+}
+
+/* ---- Cart Badge ---- */
+.cart-link {
+    position: relative;
+}
+
+.cart-badge {
+    position: absolute;
+    top: -8px;
+    right: -12px;
+    background: #e74c3c;
+    color: #fff;
+    font-size: 11px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* ---- Notification Toast ---- */
+.toast {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 15px 25px;
+    border-radius: 10px;
+    font-size: 14px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transform: translateX(400px);
+    transition: transform 0.4s ease;
+    z-index: 9999;
+}
+
+.toast.show {
+    transform: translateX(0);
+}
+
+/* ---- Search Bar ---- */
+.search-bar {
+    text-align: center;
+    padding: 30px 20px 10px;
+}
+
+.search-bar input {
+    width: 100%;
+    max-width: 500px;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    background-color: rgba(255,255,255,0.9);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    outline: none;
+}
+
+.search-bar input:focus {
+    box-shadow: 0 2px 15px rgba(76, 175, 80, 0.4);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    nav ul {
+        gap: 10px;
+    }
+    
+    .about-container .features {
+        grid-template-columns: 1fr;
+    }
+    
+    .book-card {
+        width: 100%;
+        max-width: 320px;
+    }
+    
+    .form-container {
+        margin: 30px 15px;
+    }
+    
+    .cart-item {
+        flex-direction: column;
+        text-align: center;
+    }
+}
